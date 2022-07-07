@@ -93,104 +93,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Ms. Yusri Alfiyya</td>
-                    <td>0c:98:38:b6:86:06</td>
-                </tr>
+                <?php
+                $conn = mysqli_connect("localhost", "root", "", "user_php");
+                $sql = "SELECT * FROM verifed";
+                $result = $conn->query($sql);
+                
+                if ($result->num_rows > 0) {
+                while ($row = $result-> fetch_assoc()) {
+                    echo "<tr><td>" . $row["id"] . "</td><td>" . $row["owner"] . "</td><td>" . $row["adrress"] . "</td></tr>";
+                    }
+                }
+                else {
+                    echo "No Results";
+                }
+                $conn->close();
+                ?>
             </tbody>
-            <tbody>
-                <tr>
-                    <td>2</td>
-                    <td>Ms. Nova Dwi Astuti</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>3</td>
-                    <td>Mr. Iqbal Alfajar</td>
-                    <td>30:c6:f7:05:86:a6</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>4</td>
-                    <td>Ms. Sri Ulina</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>5</td>
-                    <td>Mr. People </td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>6</td>
-                    <td>Ms. People</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>7</td>
-                    <td>Ms. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>8</td>
-                    <td>Mr. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>9</td>
-                    <td>Ms. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>10</td>
-                    <td>Mr. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>11</td>
-                    <td>Ms. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>12</td>
-                    <td>Mr. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>13</td>
-                    <td>Mr. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>14</td>
-                    <td>Mr. Sape Aje Dah</td>
-                    <td>5c:d0:6e:34:12:1a</td>
-                </tr>
-            </tbody>
-
         </table>
         </div>
             <!-- <i class="uil uil-bars sidebar-toggle"></i>
