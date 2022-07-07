@@ -113,7 +113,22 @@
                     <div class="box box2">
                         <i class="fa-solid fa-users"></i>
                         <span class="text">Total Verified User</span>
-                        <span class="number">14</span>
+                        <span class="number">
+                        <?php
+                            $conn = mysqli_connect("localhost", "root", "", "user_php");
+
+                            $sql = "SELECT * from verifed";
+
+                            if ($result = mysqli_query($conn, $sql)) {
+
+                                // Return the number of rows in result set
+                                $rowcount = mysqli_num_rows( $result );
+                                
+                                // Display result
+                                printf("  %d\n", $rowcount);
+                            }
+                        ?>
+                        </span>
                         <p class="text-muted">Last 3 Months</p>
                     </div>
                 </div>
