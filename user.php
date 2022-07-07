@@ -40,7 +40,7 @@
                 </a></li>
                 <li><a href="history.php">
                     <i class="fa-solid fa-chart-simple"></i>
-                    <span class="link-name">History & Chart</span>
+                    <span class="link-name">History</span>
                 </a></li>
             </ul>
             
